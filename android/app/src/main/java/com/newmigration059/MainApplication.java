@@ -2,7 +2,14 @@ package com.newmigration059;
 
 import android.app.Application;
 
+import com.taskrabbit.zendesk.*;
+import com.zopim.android.sdk.api.ZopimChat;
 import com.facebook.react.ReactApplication;
+import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import com.horcrux.svg.SvgPackage;
+import io.realm.react.RealmReactPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +29,13 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new RNI18nPackage(),
+            new AsyncStoragePackage(),
+          new SplashScreenReactPackage(),
+          new SvgPackage(),
+          new RealmReactPackage(),
+          new RNZendeskChatPackage()
       );
     }
 
@@ -40,6 +53,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    ZopimChat.init("ZXuFuBFUS919FLIZkz5GlaIOEbzRUadx");
     SoLoader.init(this, /* native exopackage */ false);
   }
 }
