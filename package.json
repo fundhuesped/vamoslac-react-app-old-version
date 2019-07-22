@@ -10,6 +10,7 @@
     "@react-native-community/async-storage": "^1.5.1",
     "react": "16.8.6",
     "react-native": "0.59.7",
+    "react-native-google-analytics-bridge": "^7.0.0",
     "react-native-i18n": "^2.0.15",
     "react-native-permissions": "^1.2.0",
     "react-native-splash-screen": "^3.2.0",

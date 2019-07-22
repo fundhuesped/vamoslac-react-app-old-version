@@ -5,6 +5,7 @@ import android.app.Application;
 import com.taskrabbit.zendesk.*;
 import com.zopim.android.sdk.api.ZopimChat;
 import com.facebook.react.ReactApplication;
+import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -30,8 +31,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNI18nPackage(),
-            new AsyncStoragePackage(),
+            new GoogleAnalyticsBridgePackage(),
+          new RNI18nPackage(),
+          new AsyncStoragePackage(),
           new SplashScreenReactPackage(),
           new SvgPackage(),
           new RealmReactPackage(),
