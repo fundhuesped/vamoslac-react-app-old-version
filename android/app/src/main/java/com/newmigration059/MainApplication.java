@@ -5,6 +5,8 @@ import android.app.Application;
 import com.taskrabbit.zendesk.*;
 import com.zopim.android.sdk.api.ZopimChat;
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
@@ -32,6 +34,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new VectorIconsPackage(),
+            new MapsPackage(),
             new RNDeviceInfo(),
             new GoogleAnalyticsBridgePackage(),
           new RNI18nPackage(),

@@ -7,27 +7,31 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.3",
     "@react-native-community/async-storage": "^1.5.1",
+    "@unimodules/core": "^2.0.1",
+    "@unimodules/react-native-adapter": "^2.0.1",
     "expo-asset": "^5.0.1",
     "expo-constants": "^5.0.1",
     "expo-file-system": "^5.0.1",
     "expo-font": "^5.0.1",
     "lottie-react-native": "^3.0.3",
     "native-base": "^2.12.2",
-    "react": "16.8.6",
-    "react-native": "0.59.7",
+    "react": "16.8.3",
+    "react-native": "0.59.9",
     "react-native-collapsible": "^1.4.0",
     "react-native-device-info": "^2.2.2",
     "react-native-google-analytics-bridge": "^7.0.0",
     "react-native-i18n": "^2.0.15",
+    "react-native-maps": "^0.25.0",
     "react-native-permissions": "^1.2.0",
     "react-native-splash-screen": "^3.2.0",
     "react-native-svg": "^9.5.3",
     "react-native-zendesk-chat": "^0.2.2",
     "react-navigation": "^1.0.0-beta.11",
-    "react-redux": "^7.1.0",
+    "react-redux": "^5.0.5",
     "realm": "^2.29.0",
-    "redux": "^4.0.4",
+    "redux": "^3.7.1",
     "redux-logger": "3.0.6"
   },
   "devDependencies": {
@@ -35,8 +39,9 @@
     "@babel/runtime": "^7.5.5",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
-    "metro-react-native-babel-preset": "^0.55.0",
-    "react-test-renderer": "16.8.6"
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-test-renderer": "16.8.3",
+    "reactotron-react-native": "^3.6.4"
   },
   "jest": {
     "preset": "react-native"
