@@ -53,7 +53,7 @@ export default class App extends React.Component {
     this.state = { rehydrated: false };
   }
 
-  componentDidMount = () => {
+  componentDidMount(){
     let storeRealm = _getStore("1");
     if (storeRealm === undefined) {
       this.makeCallToFB();

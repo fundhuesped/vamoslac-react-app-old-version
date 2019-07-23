@@ -75,18 +75,20 @@ class SmartLanding extends React.Component {
             downloading={true}
           />
         );
+      else
+        component = (
+          <DummyLanding
+            navigation={this.props.navigation}
+            ui={this.props.ui}
+            db={this.props.db}
+            dispatch={this.props.dispatch}
+            chat={this.chat}
+            updateData={this.updateData}
+          />
+        );
     }
 
-    return (
-      <DummyLanding
-        navigation={this.props.navigation}
-        ui={this.props.ui}
-        db={this.props.db}
-        dispatch={this.props.dispatch}
-        chat={this.chat}
-        updateData={this.updateData}
-      />
-    );
+    return component;
   };
 
   render() {

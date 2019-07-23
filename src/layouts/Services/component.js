@@ -159,10 +159,10 @@ export default class Services extends React.Component {
             );
         }
       } else {
-        Alert.alert(titleAlert, `el error que pasas en aca`)
+        Alert.alert(titleAlert, alertContent)
       }
     } catch (error) {
-      Alert.alert(titleAlert, `el error que pasas en el cathc ${error}`)
+      Alert.alert(titleAlert, alertContent)
     }
 
 
