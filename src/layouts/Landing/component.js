@@ -6,7 +6,9 @@ import {
   TouchableHighlight,
   Dimensions,
   ScrollView,
-  Modal
+  Modal,
+  PermissionsAndroid,
+  Alert
 } from "react-native";
 import {
   Container,
@@ -79,59 +81,74 @@ export default class Landing extends React.Component {
 
   _cleanState = () => this.setState({ buttonId: "" });
 
-  _goToGeolocation = () => {
-    // Permissions.check('location', 'always')
-    //   .then(response => {
-    //     if(response !== 'authorized') this.setState({showModalErrorGPS:true, showModalGPS: false})
-    // })
-    this.setState({ showModalGPS: true });
-    this._handleService(TEEN);
-    if (
-      this.props.ui.searchEngine.userInput.GEOLOCATE.timeStamp === undefined
-    ) {
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          this.props.dispatch(
-            setCurrentLocation(
-              position.coords.latitude,
-              position.coords.longitude
-            )
-          );
-          this._getAddress(position.coords);
-        },
-        error => {
-          this.setState({ showModalErrorGPS: true, showModalGPS: false });
-        },
-        { enableHighAccuracy: false, timeout: 10000, maximumAge: 1000 }
-      );
-    } else {
-      let currentTime = new Date(),
-        timeStamp = this.props.ui.searchEngine.userInput.GEOLOCATE.timeStamp;
+  _goToGeolocation = async () => {
+    const titleAlert = I18n.t("title_error_geolocation", {
+      locale: this.props.ui.lang
+    })
+    const alertContent = I18n.t("alert_error_geolocation", {
+      locale: this.props.ui.lang
+    })
 
-      if (
-        currentTime.getTime() - timeStamp.getTime() >=
-        TIME_STAMP_GPS_MIN * 60 * 1000
-      ) {
-        navigator.geolocation.getCurrentPosition(
-          position => {
-            this.props.dispatch(
-              setCurrentLocation(
-                position.coords.latitude,
-                position.coords.longitude
-              )
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+      )
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        this.setState({ showModalGPS: true });
+        this._handleService(TEEN);
+        if (
+          this.props.ui.searchEngine.userInput.GEOLOCATE.timeStamp === undefined
+        ) {
+          navigator.geolocation.getCurrentPosition(
+            position => {
+              this.props.dispatch(
+                setCurrentLocation(
+                  position.coords.latitude,
+                  position.coords.longitude
+                )
+              );
+              this._getAddress(position.coords);
+            },
+            error => {
+              this.setState({ showModalErrorGPS: true, showModalGPS: false });
+            },
+            { enableHighAccuracy: false, timeout: 10000, maximumAge: 1000 }
+          );
+        } else {
+          let currentTime = new Date(),
+            timeStamp = this.props.ui.searchEngine.userInput.GEOLOCATE.timeStamp;
+    
+          if (
+            currentTime.getTime() - timeStamp.getTime() >=
+            TIME_STAMP_GPS_MIN * 60 * 1000
+          ) {
+            navigator.geolocation.getCurrentPosition(
+              position => {
+                this.props.dispatch(
+                  setCurrentLocation(
+                    position.coords.latitude,
+                    position.coords.longitude
+                  )
+                );
+                this._getAddress(position.coords);
+              },
+              error => {
+                this.setState({ showModalErrorGPS: false });
+              },
+              { enableHighAccuracy: false, timeout: 10000, maximumAge: 1000 }
             );
-            this._getAddress(position.coords);
-          },
-          error => {
-            this.setState({ showModalErrorGPS: false });
-          },
-          { enableHighAccuracy: false, timeout: 10000, maximumAge: 1000 }
-        );
-      } else
-        this._getAddress(
-          this.props.ui.searchEngine.userInput.GEOLOCATE.currentLocation
-        );
+          } else
+            this._getAddress(
+              this.props.ui.searchEngine.userInput.GEOLOCATE.currentLocation
+            );
+        }
+      } else {
+        Alert.alert(titleAlert, alertContent)
+      }
+    } catch (error) {
+      Alert.alert(titleAlert, alertContent)
     }
+
   };
 
   _getAddress = async coords => {
