@@ -5,12 +5,12 @@ import PlacePreviewItem from "../PlacePreviewItem/component.js";
 export default class PlacePreviewList extends React.Component {
   state = { selected: (new Map(): Map<string, boolean>) };
 
-  _keyExtractor = (item, index) => item.placeData.placeId;
+  _keyExtractor = (item, index) => item.placeData.placeId && item.placeData.placeId.toString();
 
   _onPressItem = (id: string) => {
     // updater functions are preferred for transactional updates
     this.setState(state => {
-      // copy the map rather than modifying state.
+      // copy the map rather than modi  fying state.
       const selected = new Map(state.selected);
       selected.set(id, !selected.get(id)); // toggle
       return { selected };

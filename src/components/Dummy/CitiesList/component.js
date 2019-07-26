@@ -8,7 +8,7 @@ import { URL } from "../../../config/HTTP/index.js";
 export default class CitiesList extends React.PureComponent {
   state = { selected: (new Map(): Map<string, boolean>) };
 
-  _keyExtractor = (item, index) => item.id;
+  _keyExtractor = (item, index) => item.id && item.id.toString();
 
   _onPressItem = (id: string) => {
     // updater functions are preferred for transactional updates

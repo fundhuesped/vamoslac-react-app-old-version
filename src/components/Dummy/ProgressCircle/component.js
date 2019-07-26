@@ -122,7 +122,9 @@ export default class ProgressCircle extends React.Component {
           }}
           style={{
             width: "50%",
-            height: "50%"
+            height: "50%",
+            alignSelf: 'center',
+            alignItems: 'center'
           }}
           source={require("../../../assets/animations/data.json")}
           loop={true}
