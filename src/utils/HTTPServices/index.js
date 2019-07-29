@@ -11,6 +11,7 @@ import {
   URLCITIES,
   URL
 } from "../../config/HTTP/index.js";
+import Reactotron from "reactotron-react-native";
 
 export class HTTPServices {
   constructor() {
@@ -26,6 +27,7 @@ export class HTTPServices {
   }
 
   fetchPlaces = async () => {
+    Reactotron.log('EJETUCA EL REPLACEEEEE')
     store.dispatch(startFetching());
     while (this.currentPage) {
       if (this.currentPage <= this.totalPages) {
@@ -149,6 +151,7 @@ export class HTTPServices {
   };
 
   cleanState = () => {
+    Reactotron.log('SE EJECUTA CLEANnnnnn')
     this.currentPage = 1;
     this.currentDataPlaces = {};
     this.currentDataCities = {};
