@@ -6,7 +6,7 @@ import com.taskrabbit.zendesk.*;
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.zopim.android.sdk.api.ZopimChat;
 import com.facebook.react.ReactApplication;
-import com.oblador.vectoricons.VectorIconsPackage;
+// import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
@@ -36,7 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new LottiePackage(),
-          new VectorIconsPackage(),
+          // new VectorIconsPackage(),
           new MapsPackage(),
           new RNDeviceInfo(),
           new GoogleAnalyticsBridgePackage(),
