@@ -16,6 +16,7 @@ import I18n from "../../config/i18n/index.js";
 import { Toast, Icon } from "native-base";
 import { DISTANCE_KM } from "../../config/HTTP/index.js";
 
+import Reactotron from "reactotron-react-native";
 import SVGCondomIcon from "../../components/Dummy/SVG/CondomIcon/component.js";
 import SVGDetectionIcon from "../../components/Dummy/SVG/DetectionIcon/component.js";
 import SVGHealthIcon from "../../components/Dummy/SVG/HealthIcon/component.js";
@@ -570,8 +571,8 @@ export class Engine {
 
   searchForAutocomplete = location => {
     let filterData;
-    filterData = Object.values(this.Store)
-      .filter(place => {
+    let storeAux = Object.values(this.Store).length > 0 ? Object.values(this.Store) : this.Store
+    filterData = storeAux.filter(place => {
         switch (this.Service) {
           case CON: {
             if (location.idPartido) {
