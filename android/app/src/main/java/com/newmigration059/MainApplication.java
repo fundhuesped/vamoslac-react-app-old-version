@@ -1,4 +1,4 @@
-package com.newmigration059;
+package com.vamoslac.myapp;
 
 import android.app.Application;
 

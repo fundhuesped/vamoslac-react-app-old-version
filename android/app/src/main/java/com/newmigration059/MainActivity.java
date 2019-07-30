@@ -1,4 +1,4 @@
-package com.newmigration059;
+package com.vamoslac.myapp;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
@@ -18,6 +18,6 @@ public class MainActivity extends ReactActivity {
     
     @Override
     protected String getMainComponentName() {
-        return "newmigration059";
+        return "Vamos";
     }
 }

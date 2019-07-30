@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.newmigration059">
+  package="com.vamoslac.myapp">
 
     <!-- BEGIN PERMISSIONS -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH"/>         <!-- for Device Name -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>  <!-- for Phone Number -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <!-- END PERMISSIONS -->
 
     <application
