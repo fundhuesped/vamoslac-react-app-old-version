@@ -301,7 +301,7 @@ export default class Map extends React.Component {
                 this._onPressZoomIn();
               }}
             >
-              <Icon name="ios-add-outline" style={styles.icon} size={30} />
+              <Icon name="add" style={styles.icon} size={30} />
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.zoomOut}
@@ -309,7 +309,7 @@ export default class Map extends React.Component {
                 this._onPressZoomOut();
               }}
             >
-              <Icon name="ios-remove-outline" style={styles.icon} size={30} />
+              <Icon name="remove" style={styles.icon} size={30} />
             </TouchableOpacity>
           </View>
         </Container>
