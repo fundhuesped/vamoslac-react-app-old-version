@@ -38,7 +38,7 @@ export default class ChatIcon extends React.Component {
               letterSpacing="0.400000006"
               fill={this.props.color ? this.props.color : "#FFFFFF"}
             >
-              <TSpan x="116.2" y="30">
+              <TSpan x="116.2" y="116">
                 …
               </TSpan>
             </Text>

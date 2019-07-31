@@ -241,7 +241,7 @@ export default class Establishment extends React.Component {
         {service.openTime !== "" && service.phone !== undefined ? (
           <View style={styles.serviceAditionalInfoItem}>
             <Icon
-              name="ios-clock-outline"
+              name="md-clock"
               style={{ fontSize: 14, color: "#FFFFFF", marginRight: "2%" }}
             />
             <Text style={{ color: "#FFFFFF", flex: 1, flexWrap: "wrap" }}>

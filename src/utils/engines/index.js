@@ -550,8 +550,8 @@ export class Engine {
   };
 
   searchForTeen = coordsOrigin => {
-    let filterData = Object.values(this.Store)
-      .filter(place => {
+    let storeAux = Object.values(this.Store).length > 0 ? Object.values(this.Store) : this.Store
+    let filterData = storeAux.filter(place => {
         if (isTeen(place)) {
           let distance = HaversineFormula(place, coordsOrigin);
           if (distance <= DISTANCE_KM && distance !== 0) return place;

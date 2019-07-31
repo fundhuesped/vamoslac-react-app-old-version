@@ -98,6 +98,7 @@ export default class ProgressCircle extends React.Component {
                       }}
                     >
                       <Picker
+                        mode='dropdown'
                         selectedValue={this.state.language}
                         onValueChange={(itemValue, itemIndex) =>
                           this.setState({ language: itemValue }, () => {
@@ -172,12 +173,12 @@ export default class ProgressCircle extends React.Component {
                     >
                       <View style={{ flexDirection: "row" }}>
                         <CheckBox
-                          onPress={() =>
-                            this.setState({
-                              agreeTermsConditions: !this.state
-                                .agreeTermsConditions
-                            })
-                          }
+                          // onPress={() =>
+                          //   this.setState({
+                          //     agreeTermsConditions: !this.state
+                          //       .agreeTermsConditions
+                          //   })
+                          // }
                           checked={this.state.agreeTermsConditions}
                           color={"#e6334c"}
                         />

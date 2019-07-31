@@ -174,7 +174,7 @@ dependencies {
     implementation project(':react-native-zendesk-chat')
     implementation 'com.zopim.android:sdk:1.4.2'
     implementation group: 'com.zendesk', name: 'support', version: '2.1.1'
-    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'androidx.multidex:multidex:2.0.0'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation "com.facebook.react:react-native:+"  // From node_modules
