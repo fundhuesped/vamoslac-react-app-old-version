@@ -173,12 +173,12 @@ export default class ProgressCircle extends React.Component {
                     >
                       <View style={{ flexDirection: "row" }}>
                         <CheckBox
-                          // onPress={() =>
-                          //   this.setState({
-                          //     agreeTermsConditions: !this.state
-                          //       .agreeTermsConditions
-                          //   })
-                          // }
+                          onPress={() =>
+                            this.setState({
+                              agreeTermsConditions: !this.state
+                                .agreeTermsConditions
+                            })
+                          }
                           checked={this.state.agreeTermsConditions}
                           color={"#e6334c"}
                         />
