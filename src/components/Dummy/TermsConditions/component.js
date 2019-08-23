@@ -7,7 +7,8 @@ import {
   Dimensions,
   Picker,
   ScrollView,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from "react-native";
 import {
   StyleProvider,
@@ -34,6 +35,7 @@ export default class ProgressCircle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      radioButton: 'en-US',
       language: props.ui.lang,
       showModalTermsConditions: true,
       agreeTermsConditions: false
@@ -48,6 +50,11 @@ export default class ProgressCircle extends React.Component {
       this.props.dispatch(setTermsConditions());
     });
   };
+
+  selectLanguage = (lang) => {
+    this.setState({radioButton: lang})
+    this.props.dispatch(setLang(lang));
+  }
 
   render() {
     return (
@@ -92,13 +99,41 @@ export default class ProgressCircle extends React.Component {
                     </View>
                     <View
                       style={{
-                        borderWidth: 2,
-                        borderColor: "#e6334c",
-                        width: 90
+                        // borderWidth: 2,
+                        // borderColor: "#e6334c",
+                        width: '40%',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center'
                       }}
                     >
-                      <Picker
-                        mode='dropdown'
+                      <TouchableOpacity activeOpacity={0.5} onPress={()=>this.selectLanguage('en-US')}>
+                        <View style={{flexDirection: 'row', alignItems:'center', marginRight: 50}}>
+                          <CheckBox
+                          style={{borderRadius: 10}}
+                          title='en-US'
+                          color={"#e6334c"}
+                          checked={this.state.radioButton === 'en-US'}
+                          onPress={() => this.selectLanguage('en-US')}
+                          ></CheckBox>
+                          <Text style={{marginLeft: 20, fontSize: 30}}>EN</Text>
+                        </View>
+                      </TouchableOpacity>
+                      <TouchableOpacity activeOpacity={0.5} onPress={()=>this.selectLanguage('es-ES')}>
+                        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <CheckBox
+                          style={{borderRadius: 10}}
+                          title='es-ES'
+                          color={"#e6334c"}
+                          checked={this.state.radioButton === 'es-ES'}
+                          onPress={() => this.selectLanguage('es-ES')}
+                          ></CheckBox>
+                          <Text style={{marginLeft: 20, fontSize: 30}}>ES</Text>
+                        </View>
+                      </TouchableOpacity>
+
+                      
+                      {/* <Picker
                         selectedValue={this.state.language}
                         onValueChange={(itemValue, itemIndex) =>
                           this.setState({ language: itemValue }, () => {
@@ -116,7 +151,7 @@ export default class ProgressCircle extends React.Component {
                           value={"en-US"}
                           color="#e6334c"
                         />
-                      </Picker>
+                      </Picker> */}
                     </View>
                   </View>
                   <View style={styles.titleHeader}>
@@ -169,7 +204,7 @@ export default class ProgressCircle extends React.Component {
                       }
                       activeOpacity={0.5}
                       underlayColor="#e6334c"
-                      style={{ marginTop: "2.5%" }}
+                      style={{ marginTop: "2.5%", height: 35, justifyContent: 'center'}}
                     >
                       <View style={{ flexDirection: "row" }}>
                         <CheckBox

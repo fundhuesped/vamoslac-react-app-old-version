@@ -334,7 +334,6 @@ class SideBar extends Component {
               {/* <Text style={styles.bodyItemText}>{I18n.t("language", {locale: this.props.ui.lang})}</Text> */}
               <View style={{ width: 100, paddingTop: 3 }}>
                 <Picker
-                  mode='dialog'
                   selectedValue={this.state.language}
                   onValueChange={(itemValue, itemIndex) =>
                     this.setState({ language: itemValue }, () => {
