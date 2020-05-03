@@ -27,7 +27,9 @@ function mapStateToProps(store) {
 }
 
 class SmartServices extends React.Component {
-  componentDidMount = () => {};
+  componentDidMount = () => {
+    ZendeskChat.init('ZXuFuBFUS919FLIZkz5GlaIOEbzRUadx')
+  };
 
   chat = () => {
     let lookingFor = this.props.ui.lookingFor ? this.props.ui.lookingFor : "";

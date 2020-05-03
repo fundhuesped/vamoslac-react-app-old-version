@@ -86,7 +86,7 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
-def enableSeparateBuildPerCPUArchitecture = false
+def enableSeparateBuildPerCPUArchitecture = true
 
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
@@ -106,8 +106,8 @@ android {
         applicationId "com.vamoslac.myapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 11
-        versionName "0.11"
+        versionCode 14
+        versionName "0.14"
     }
     dexOptions {
       jumboMode true  // This for string limit
@@ -172,8 +172,7 @@ dependencies {
     implementation project(':react-native-svg')
     implementation project(':realm')
     implementation project(':react-native-zendesk-chat')
-    implementation 'com.zopim.android:sdk:1.4.2'
-    implementation group: 'com.zendesk', name: 'support', version: '2.1.1'
+    implementation group: 'com.zendesk', name: 'support', version: '3.0.2'
     implementation 'androidx.multidex:multidex:2.0.0'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.0.0'

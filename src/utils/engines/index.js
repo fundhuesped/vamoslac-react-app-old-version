@@ -114,7 +114,7 @@ export const getGralTextandILEForCountry = country => {
       {
         ILEService = true;
         asocciationImageUrl = [
-          require("../../assets/images/countryLogos/BZ.jpg")
+          require("../../assets/images/countryLogos/BZ.png")
         ];
         generalLinks = ["www.bflabelize.org"];
         ILELinks = [];

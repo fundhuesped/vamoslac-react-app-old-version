@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.taskrabbit.zendesk.*;
 import com.airbnb.android.react.lottie.LottiePackage;
-import com.zopim.android.sdk.api.ZopimChat;
+// import com.zopim.android.sdk.api.ZopimChat;
 import com.facebook.react.ReactApplication;
 // import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
@@ -63,7 +63,6 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
-    ZopimChat.init("ZXuFuBFUS919FLIZkz5GlaIOEbzRUadx");
     SoLoader.init(this, /* native exopackage */ false);
   }
 }
