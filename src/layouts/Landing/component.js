@@ -8,7 +8,8 @@ import {
   ScrollView,
   Modal,
   PermissionsAndroid,
-  Alert
+  Alert,
+  PixelRatio
 } from "react-native";
 import {
   Container,
@@ -55,7 +56,7 @@ import {
   TEEN
 } from "../../constants/action-types";
 
-const { width } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
 
 export default class Landing extends React.Component {
   constructor() {
@@ -333,7 +334,7 @@ export default class Landing extends React.Component {
                     >
                       <View style={styles.boxContent}>
                         <SVGILEIcon height={width / 7} width={width / 7} />
-                        <Text style={styles.boxContentText}>
+                        <Text style={[styles.boxContentText, {fontSize: width / 36}]}>
                           {I18n.t("ile_name", { locale: this.props.ui.lang })}
                         </Text>
                       </View>
@@ -348,7 +349,7 @@ export default class Landing extends React.Component {
                     >
                       <View style={styles.boxContent}>
                         <SVGHealthIcon height={width / 8} width={width / 8} />
-                        <Text style={styles.boxContentText}>
+                        <Text style={[styles.boxContentText, {fontSize: width / 38}]}>
                           {I18n.t("ssr_name", { locale: this.props.ui.lang })}
                         </Text>
                       </View>

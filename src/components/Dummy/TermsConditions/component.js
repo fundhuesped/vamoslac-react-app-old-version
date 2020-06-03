@@ -8,7 +8,8 @@ import {
   Picker,
   ScrollView,
   TouchableHighlight,
-  TouchableOpacity
+  TouchableOpacity,
+  PixelRatio
 } from "react-native";
 import {
   StyleProvider,
@@ -206,7 +207,7 @@ export default class ProgressCircle extends React.Component {
                       underlayColor="#e6334c"
                       style={{ marginTop: "2.5%", height: 35, justifyContent: 'center'}}
                     >
-                      <View style={{ flexDirection: "row" }}>
+                      <View style={{ flexDirection: "row", alignItems: 'center' }}>
                         <CheckBox
                           onPress={() =>
                             this.setState({
@@ -222,7 +223,7 @@ export default class ProgressCircle extends React.Component {
                             style={{
                               color: "#e6334c",
                               fontFamily: "OpenSans",
-                              fontSize: width / 22
+                              fontSize: PixelRatio.get() > 1.8 ? width /28 : width / 22
                             }}
                           >
                             {I18n.t("terms_agree", {
