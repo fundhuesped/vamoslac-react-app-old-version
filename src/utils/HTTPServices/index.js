@@ -27,7 +27,6 @@ export class HTTPServices {
   }
 
   fetchPlaces = async () => {
-    Reactotron.log('EJETUCA EL REPLACEEEEE')
     store.dispatch(startFetching());
     while (this.currentPage) {
       if (this.currentPage <= this.totalPages) {
@@ -39,7 +38,9 @@ export class HTTPServices {
               "Content-Type": "application/json"
             }
           });
+
           let responseJson = await response.json();
+          Reactotron.log('FETCH PLACES', responseJson)
 
           this.totalEstablishment = responseJson.total;
           this.nextUrl = `${URLPLACES}/?page=${responseJson.current_page + 1}`;
@@ -84,6 +85,7 @@ export class HTTPServices {
             }
           });
           let responseJson = await response.json();
+          Reactotron.log('CHECK PLACES', responseJson)
           // if(currentPage % 5 === 0) throw new Error('error')
           failedPages[i.toString()] = responseJson.data;
         } catch (error) {
@@ -112,6 +114,7 @@ export class HTTPServices {
             }
           });
           let responseJson = await response.json();
+          Reactotron.log('FECTH CITIES', responseJson)
           this.currentDataCities = responseJson;
         } catch (error) {
           // alert('error fetching cities'+error.message)
@@ -151,7 +154,6 @@ export class HTTPServices {
   };
 
   cleanState = () => {
-    Reactotron.log('SE EJECUTA CLEANnnnnn')
     this.currentPage = 1;
     this.currentDataPlaces = {};
     this.currentDataCities = {};

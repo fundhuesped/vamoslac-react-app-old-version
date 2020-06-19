@@ -36,7 +36,7 @@ export default class ProgressCircle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      radioButton: 'en-US',
+      radioButton: 'es-ES',
       language: props.ui.lang,
       showModalTermsConditions: true,
       agreeTermsConditions: false
