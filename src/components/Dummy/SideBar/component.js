@@ -454,7 +454,7 @@ class SideBar extends Component {
         <View style={styles.footer}>
           <View style={styles.footerImage}>
             <Image
-              source={require("../../../assets/images/ippf_logo.png")}
+              source={require("../../../assets/images/logo-ippf-2020.png")}
               style={styles.logo}
               resizeMode="contain"
             />

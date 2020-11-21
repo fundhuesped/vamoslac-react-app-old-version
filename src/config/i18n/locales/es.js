@@ -92,19 +92,19 @@ export default {
   General_ILE_AG:
     "En Antigua y Barbuda el aborto está prohibido en cualquier circunstancia. Para más información, puedes visitar",
   General_ILE_AR:
-    "En Argentina el aborto es legal bajo ciertas circunstancias. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_AW:
     "En Aruba el aborto está prohibido en cualquier circunstancia. Para más información, puedes visitar",
   General_ILE_BB:
-    "En Barbados el aborto es legal bajo ciertas circunstancias. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_BZ:
-    "En Belice el aborto es legal bajo ciertas circunstancias. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_BO:
-    "En Bolivia el aborto es legal bajo ciertas circunstancias. En los casos permitidos por ley podrás acceder a servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_CL:
     "En Chile el aborto está legalmente restringido. Sin embargo, puedes acceder a servicios de orientación e información integral y confidencial sobre opciones ante embarazos no deseados.",
   General_ILE_CO:
-    "En Colombia el aborto es legal bajo ciertas circunstancias. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_CW:
     "En Curacao el aborto está prohibido en cualquier circunstancia. Para más información, puedes visitar",
   General_ILE_DM:
@@ -120,7 +120,7 @@ export default {
   General_ILE_GT:
     "En Guatemala el aborto está legalmente restringido. Sin embargo, puedes acceder a servicios de orientación e información integral y confidencial sobre opciones ante embarazos no deseados.",
   General_ILE_GY:
-    "En Guyana el aborto es legal bajo ciertas circunstancias. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_HT:
     "En Haití el aborto está legalmente restringido. Sin embargo, puedes acceder a servicios de orientación e información integral y confidencial sobre opciones ante embarazos no deseados.",
   General_ILE_HN:
@@ -128,7 +128,7 @@ export default {
   General_ILE_JM:
     "En Jamaica el aborto está prohibido en cualquier circunstancia. Para más información, puedes visitar",
   General_ILE_MX:
-    "En México el aborto es legal bajo ciertas circunstancias. En la Ciudad de México el aborto es legal. Puedes acceder a consejería y servicios integrales de interrupción legal del embarazo en las siguientes clínicas.",
+    "",
   General_ILE_PA:
     "En Panamá el aborto está prohibido en cualquier circunstancia. Para más información, puedes visitar",
   General_ILE_PY:
@@ -138,7 +138,7 @@ export default {
   General_ILE_PR:
     "En Puerto Rico el aborto es legal. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
   General_ILE_LC:
-    "En Santa Lucía el aborto es legal bajo ciertas circunstancias. Puedes acceder a consejería y servicios integrales de interrupción legal de embarazo en las siguientes clínicas.",
+    "",
   General_ILE_VC:
     "En San Vicente el aborto está prohibido en cualquier circunstancia. Para más información, puedes visitar",
   General_ILE_SR:
