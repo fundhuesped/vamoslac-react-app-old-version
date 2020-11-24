@@ -92,19 +92,19 @@ export default {
   General_ILE_AG:
     "In Antigua and Barbuda abortion is prohibited under all circumstances. For more information, visit",
   General_ILE_AR:
-    "In Argentina abortion is legal under certain circumstances. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_AW:
     "In Aruba abortion is prohibited under all circumstances. For more information, visit",
   General_ILE_BB:
-    "In Barbados abortion is legal under certain circumstances. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_BZ:
-    "In Belize abortion is legal under certain circumstances. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_BO:
-    "In Bolivia abortion is legal under certain circumstances. In cases permitted by law you can access comprehensive legal abortion services at the following clinics.",
+    "",
   General_ILE_CL:
     "In Chile abortion is legally restricted. However, you can access comprehensive and confidential counseling and information about options for unplanned pregnancy at the following clinics.",
   General_ILE_CO:
-    "In Colombia abortion is legal under certain circumstances. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_CW:
     "In Curacao abortion is prohibited under all circumstances. For more information, visit",
   General_ILE_DM:
@@ -120,7 +120,7 @@ export default {
   General_ILE_GT:
     "In Guatemala abortion is legally restricted. However, you can access comprehensive and confidential counseling and information about options for unplanned pregnancy at the following clinics.",
   General_ILE_GY:
-    "In Guyana abortion is legal under certain circumstances. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_HT:
     "In Haiti abortion is legally restricted. However, you can access comprehensive and confidential counseling and information about options for unplanned pregnancy at the following clinics.",
   General_ILE_HN:
@@ -128,7 +128,7 @@ export default {
   General_ILE_JM:
     "In Jamaica abortion is prohibited under all circumstances. For more information, visit",
   General_ILE_MX:
-    "In Mexico abortion is legal under certain circumstances. In Mexico City abortion is legal. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_PA:
     "In Panama abortion is prohibited under all circumstances. For more information, visit",
   General_ILE_PY:
@@ -138,7 +138,7 @@ export default {
   General_ILE_PR:
     "In Puerto Rico abortion is legal. You can access comprehensive legal abortion counseling and services at the following clinics.",
   General_ILE_LC:
-    "In Saint Lucia abortion is legal under certain circumstances. You can access comprehensive legal abortion counseling and services at the following clinics.",
+    "",
   General_ILE_VC:
     "In Saint Vincent abortion is prohibited under all circumstances. For more information, visit",
   General_ILE_SR:
