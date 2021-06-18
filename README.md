@@ -27,5 +27,5 @@ open a simulator or connect your usb device
 
 For build a release apk
 
-* run `cd andriod && ./gradlew assembleRelease -x bundleReleaseJsAndAssets`|
+* run `cd android && ./gradlew assembleRelease -x bundleReleaseJsAndAssets`|
 
